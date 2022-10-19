@@ -1,11 +1,8 @@
-import random
 import time
-with open("words.csv", "r") as file:
-    word_list = file.readlines()
-word_list = [word.strip() for word in word_list]
+from random_word import RandomWords
 
 
-word = random.choice(word_list)
+word = RandomWords().get_random_word()
 guess_right = []
 guess_wrong = []
 game_running = True
